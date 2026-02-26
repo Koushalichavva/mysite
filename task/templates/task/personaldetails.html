@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUpForm</title>
+</head>
+<body>
+    <h1>Personal Details Form</h1>
+    <form method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        <br>
+    <h3>Personal Details</h3>
+     {{form.name.label_tag}} 
+     {{form.name}} 
+     {{form.name.errors}}
+     <br>
+     
+    {{form.email.label_tag}}
+    {{form.email}}  
+    {{form.email.errors}}  
+    <br>      
+    {{form.p_number.label_tag}}
+    {{form.p_number}}
+    {{form.p_number.errors}}
+    <br>
+    {{form.dob.label_tag}}
+    {{form.dob}}
+    {{form.dob.errors}}
+    <br>
+      {{form.gender.label_tag}}  
+     {{form.gender}}
+        {{form.gender.errors}}
+        <br>
+
+     <h3>Academic details</h3>
+      {{form.department.label_tag}} 
+      {{form.department}} 
+      {{form.department.errors}}
+      <br>
+      {{form.yostudy.label_tag}}         
+     {{form.yostudy}} 
+    {{form.yostudy.errors}} 
+        <br>
+        {{form.rollnumber.label_tag}}
+     {{form.rollnumber}}
+     {{form.rollnumber.errors}}
+     <br>
+
+     <h3>Address Details</h3>
+     {{form.address.label_tag}}
+     {{form.address}}
+        {{form.address.errors}}
+
+        <br>
+    {{form.state.label_tag}}
+    {{form.state}}
+    {{form.state.errors}}
+
+    <br>
+    {{form.pincode.label_tag}}
+    {{form.pincode}}
+    {{form.pincode.errors}}
+    <br>
+
+    <h3>Skills And Interests</h3>
+    <br>
+    {{form.technical_Skills.label_tag}}
+    {{form.technical_Skills}}
+    {{form.technical_Skills.errors}}
+
+    <br>
+    {{form.preferred_mode.label_tag}}
+    {{form.preferred_mode}}
+    {{form.preferred_mode.errors}}
+    <br>
+
+    <br>
+    <h3>Additional Information</h3>
+    <br>
+    {{form.resume_upload.label_tag}}
+    {{form.resume_upload}}
+    {{form.resume_upload.errors}}
+
+    <br>
+    {{form.about_yourself.label_tag}}
+    {{form.about_yourself}}
+    {{form.about_yourself.errors}}
+
+    <br>
+    {{form.aggree.label_tag}}
+    {{form.aggree}}
+    {{form.aggree.errors}} 
+           {% if form.name.errors %}    
+     {{form.name.errors}}
+        {% endif %} 
+    <br>
+    <button>Sign Up</button>
+    </form>
+</body>
+</html>

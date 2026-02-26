@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: darkblue;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.navbar a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Home page welcome message */
+.home-container {
+  text-align: center;
+  background-color: lightblue;
+  color: white;
+  padding: 50px;
+}
+
+/* Colleges page list */
+.colleges-list ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Students table */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
