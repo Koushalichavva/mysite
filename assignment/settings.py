@@ -43,8 +43,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -52,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'assignment.urls'
 
 TEMPLATES = [
@@ -143,7 +142,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # STATIC_ROOT='/home/koushali/mysite/staticfiles'
@@ -160,4 +159,4 @@ EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
 EMAIL_HOST_USER='chavvakoushali@gmail.com'
-EMAIL_HOST_PASSWORD='ytkf wrjz hior mxgt'
+EMAIL_HOST_PASSWORD=os.environ.get("EMAIL_HOST_PASSWORD")
